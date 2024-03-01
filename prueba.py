@@ -1,1 +1,2 @@
-print('no se uqe poner')
+texto = 'patron:  ”cod31”> BNNNN'
+
