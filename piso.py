@@ -8,28 +8,38 @@ class Piso:
         self.patron_actual = patron_actual
         self.patron_final = patron_final
         self.siguiente = None
-        self.anterior = None
+
 
     def mostrar_informacion_pisos(self):
-        print(f'Nombre: {self.nombre}\nColumnas: {self.columnas}\nFilas: {self.filas}\nPrecio Voltear: {self.precio_voltear}')
-        print(f'Precio intercambiar: {self.precio_intercambiar}\nPatron actual: {self.patron_actual}\nPatron final: {self.patron_final}')
+        print(f'Nombre: {self.nombre}\n\tColumnas:\t\t{self.columnas}\n\tFilas:\t\t\t{self.filas}\n\tPrecio Voltear:\t\t{self.precio_voltear}\n\tPrecio intercambiar:\t{self.precio_intercambiar}\n\tPatron actual:\t\t{self.patron_actual}\n\tPatron final:\t\t{self.patron_final}')
 
 
 
 class Lista_pisos:
     def __init__(self):
-        self.head = None
+        self.primer_nodo = None
+    
+    def insertar_piso(self, nombre, columnas, filas, precio_voltear, precio_intercambiar, patron_actual, patron_final):
+        nuevo_nodo = Piso(nombre, columnas, filas, precio_voltear, precio_intercambiar, patron_actual, patron_final)
+        nuevo_nodo.siguiente = self.primer_nodo
+        self.primer_nodo = nuevo_nodo
 
-    def agregar_piso(self, nombre, columnas, filas, precio_voltear, precio_intercambiar, patron_actual, patron_final):
-        new_nodo = Piso(nombre, columnas, filas, precio_voltear, precio_intercambiar, patron_actual, patron_final)
-        if self.head is None:
-            self.head = new_nodo
-            return 
-        last_nodo = self.head
-        while last_nodo.siguiente:
-            last_nodo = last_nodo.siguiente
-        last_nodo.siguiente = new_nodo
-        new_nodo.anterior = last_nodo
+    def mejor_precio(self):
+        actual = self.primer_nodo
+        while actual:
+            if actual.precio_intercambiar>actual.precio_voltear:
+                print(f'Para: {actual.nombre} es mejor usar voltear\nPrecio intercambiar: {actual.precio_intercambiar} Precio voltear{actual.precio_voltear}')
+            elif actual.precio_intercambiar==actual.precio_voltear:
+                print(f'Para: {actual.nombre} se pueden usar ambos metodos\nPrecio intercambiar: {actual.precio_intercambiar} Precio voltear{actual.precio_voltear}')
+            else:
+                print(f'Para: {actual.nombre} es mejor usar intercambiar\nPrecio intercambiar: {actual.precio_intercambiar} Precio voltear{actual.precio_voltear}')
+            actual=actual.siguiente
 
-    def anteponer_piso(self, nombre, columnas, filas, precio_voltear, precio_intercambiar, patron_actual, patron_final):
-        new_nodo = Piso(nombre, columnas, filas, precio_voltear, precio_intercambiar, patron_actual, patron_final)
+
+
+    def mostrar_pisos(self):
+        actual = self.primer_nodo
+        while actual:
+            actual.mostrar_informacion_pisos()
+            actual= actual.siguiente
+   

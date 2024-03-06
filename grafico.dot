@@ -1,0 +1,43 @@
+digraph G{
+fontname="Helvetica,Arial,sans-serif"
+node [fontname="Helvetica,Arial,sans-serif"]
+edge [fontname="Helvetica,Arial,sans-serif"]
+
+a0 [shape=none label=<
+ <TABLE border="0" cellspacing="10" cellpadding="10">
+<TR><TD bgcolor="black" >    </TD>
+<TD bgcolor="white
+" border="1">   </TD>
+<TD bgcolor="black" > 
+   </TD>
+<TD bgcolor="white" border="1">   </TD></TR>
+<TR><TD bgcolor="black" >    </TD>
+<TD bgcolor="white" border="1">   </TD>
+<TD bgcolor="black" >    </TD>
+<TD bgcolor="white" border="1">   </TD></TR>
+<TR><TD bgcolor="black" >    </TD>
+<TD bgcolor="white" border="1">   </TD>
+<TD bgcolor="black" >    </TD>
+<TD bgcolor="white" border="1">   </TD></TR>
+<TR><TD></TD></TR>
+<TR><TD bgcolor="black" >    </TD>
+<TD bgcolor="white
+" border="1">   </TD>
+<TD bgcolor="black" > 
+   </TD>
+<TD bgcolor="white" border="1">   </TD></TR>
+<TR><TD bgcolor="black" >    </TD>
+<TD bgcolor="white" border="1">   </TD>
+<TD bgcolor="black" >    </TD>
+<TD bgcolor="white" border="1">   </TD></TR>
+<TR><TD bgcolor="black" >    </TD>
+<TD bgcolor="white" border="1">   </TD>
+<TD bgcolor="black" >    </TD>
+<TD bgcolor="white" border="1">   </TD></TR>
+<TR><TD></TD></TR>
+
+</TABLE>>];
+  
+}
+
+

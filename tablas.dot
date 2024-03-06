@@ -1,0 +1,15 @@
+digraph G{
+fontname="Helvetica,Arial,sans-serif"
+node [fontname="Helvetica,Arial,sans-serif"]
+edge [fontname="Helvetica,Arial,sans-serif"]
+
+a0 [shape=none label=<<TABLE border="0" cellspacing="10" cellpadding="10"><TR><TD bgcolor="White" border="1">   </TD><TD bgcolor="black" border="1">   </TD><TD bgcolor="black" border="1">   </TD><TD bgcolor="black" border="1">   </TD></TR><TR><TD bgcolor="black" border="1">   </TD><TD bgcolor="black" border="1">   </TD><TD bgcolor="black" border="1">   </TD><TD bgcolor="White" border="1">   </TD></TR><TR><TD bgcolor="black" border="1">   </TD><TD bgcolor="black" border="1">   </TD><TD bgcolor="White" border="1">   </TD><TD bgcolor="White" border="1">   </TD></TR></TABLE>>];
+
+LKD [
+		fontsize = 20,
+		label = "lable",
+		shape = plain,
+		style = ""]
+
+        
+}
